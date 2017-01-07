@@ -115,6 +115,7 @@ var range = moment.range(start, end);
 
 when.within(range); // true
 ```
+_Note_: Dates and moment objects both use a timestamp of 00:00 if none is provided.  To ensure your range includes any timestamp for the given end date, use `.setHours(23,59,59,999)` when constructing a Date object, or `.endOf('day')` when constructing a moment object.
 
 Does it overlap another range?
 
